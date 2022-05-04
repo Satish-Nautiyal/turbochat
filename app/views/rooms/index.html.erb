@@ -1,0 +1,54 @@
+<div id="chatroom_container" class="row bg-dark text-light">
+    <div id="side_panel" class="col-md-2 col-sm-2">
+        <h5><%= current_user.email %></h5>
+
+        <h4>Users</h4>
+        <%= turbo_stream_from "users" %>
+        <div id="users">
+            <%= render @users %>
+        </div>
+        
+        <h4>Rooms</h4>
+        <%= turbo_stream_from "rooms" %>
+        <div id="rooms">
+            <%= render @rooms %>
+        </div>
+        <%= render "layouts/new_room_form"%>
+    </div>
+    <div id="room_container" class="col-md-10 col-sm-10">
+        <% if @selected_room %>
+            <div id="selected_room">
+                <h4 class="text-center"><%= @user&.email || @selected_room.name %></h4>          
+                <%= turbo_stream_from @selected_room %>
+                <div id="messages">
+                    <%= render @messages if @messages.present? %>
+                </div>
+                <%= render 'layouts/new_message_form' %>
+                <div id="new_message" class="new_message_notify" style="display:none" onclick="scroll_bottom()">
+                    <div id="number_of_messages" class="number_of_messages">0</div>
+                    <div>
+                        <img src="https://atencionclientes-telf.me/assets/giphy.gif" height="33px" style="display:block">
+                        <img src="https://atencionclientes-telf.me/assets/giphy.gif" height="33px" style="display:block;margin-top:-19px">
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+<script>
+window.scrollTo(0, document.body.scrollHeight);
+var message_div = document.getElementById("messages");
+message_div.addEventListener('DOMSubtreeModified', new_message);
+function new_message(){
+    document.getElementById("new_message").style.display="block";
+    var numberUnreadedMessages = parseInt(document.getElementById("number_of_messages").innerHTML)+1;
+    document.getElementById("number_of_messages").innerHTML = numberUnreadedMessages;
+}
+function scroll_bottom() {
+    var messagesDiv = document.getElementById("messages");
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    document.getElementById("number_of_messages").innerHTML =0;
+    document.getElementById("new_message").style.display="none";
+}
+    
+</script>
