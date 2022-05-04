@@ -7,23 +7,24 @@
 default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: ec2-54-164-40-66.compute-1.amazonaws.com
-  user: czcksebtfvrwac
+  host: "ec2-54-164-40-66.compute-1.amazonaws.com"
+  user: "czcksebtfvrwac"
   timeout: 5000
-  password: 4c6de9fbc6682a619794879f26cd76ca745960bf6fedadc58dc66b634842156f
+  password: "4c6de9fbc6682a619794879f26cd76ca745960bf6fedadc58dc66b634842156f"
   port: 5432
+  uri: "postgres://czcksebtfvrwac:4c6de9fbc6682a619794879f26cd76ca745960bf6fedadc58dc66b634842156f@ec2-54-164-40-66.compute-1.amazonaws.com:5432/d1u64ik9u3nsf4"
 
 development:
   <<: *default
-  database: d1u64ik9u3nsf4
+  database: "d1u64ik9u3nsf4"
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: d1u64ik9u3nsf4
+  database: "d1u64ik9u3nsf4"
 
 production:
   <<: *default
-  database: d1u64ik9u3nsf4
+  database: "d1u64ik9u3nsf4"
