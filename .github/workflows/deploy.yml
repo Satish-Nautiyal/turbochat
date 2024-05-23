@@ -27,7 +27,6 @@ jobs:
           bundle install
           bin/rails db:create
           bin/rails db:migrate
-          rm -R turbochat
           fuser -k 3000/tcp
 
       # The following line is not recommended in a CI/CD workflow
