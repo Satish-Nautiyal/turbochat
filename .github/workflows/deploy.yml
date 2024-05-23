@@ -23,7 +23,6 @@ jobs:
 
       - name: Setup Application
         run: |
-          rvm use 3.0.0
           bundle install
           bin/rails db:create
           bin/rails db:migrate
