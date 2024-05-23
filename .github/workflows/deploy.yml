@@ -10,7 +10,7 @@ jobs:
   build:
     defaults:
       run:
-        working-directory: /var/www/html/gitActionTurbochat/
+        working-directory: /var/www/html/gitActionTurbochat
     runs-on: self-hosted
 
     steps:
