@@ -13,16 +13,26 @@ jobs:
     defaults:
       run:
         working-directory: /var/www/html/turbochat
+
     steps:
       - uses: actions/checkout@v3
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0.0 
+          ruby-version: 3.0.0
+
       - name: Setup Application
-      run: |
-        bundle install
-        bin/rails db:create
-        bin/rails db:migrate
-        fuser -k 3000/tcp
-        bin/rails s -d
+        run: |
+          bundle install
+          bin/rails db:create
+          bin/rails db:migrate
+
+      # The following line is not recommended in a CI/CD workflow
+      # - run: fuser -k 3000/tcp
+
+      # Instead, you can start the Rails server in the background
+      - name: Start Rails Server
+        run: bin/rails server
+
+      # Add any additional steps for testing, linting, etc.
