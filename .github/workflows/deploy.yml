@@ -10,7 +10,8 @@ jobs:
   build:
     defaults:
       run:
-        working-directory: /var/www/html/gitActionTurbochat
+        #working directory of runner
+        working-directory: /var/www/html/gitActionTurbochat/turbochat/turbochat
     runs-on: self-hosted
 
     steps:
@@ -23,7 +24,6 @@ jobs:
 
       - name: Setup Application
         run: |
-          cd /var/www/html/gitActionTurbochat/turbochat/turbochat
           bundle install
           bin/rails db:create
           bin/rails db:migrate
@@ -31,8 +31,7 @@ jobs:
       # The following line is not recommended in a CI/CD workflow
       # - run: fuser -k 3000/tcp
 
-      # Instead, you can start the Rails server in the background
+      # Instead, you can start the Rails server in the background and prevent the pid to cleanup
       - name: Start Rails Server
         run: |
-          cd /var/www/html/gitActionTurbochat/turbochat/turbochat
           RUNNER_TRACKING_ID="" && (rails s &)
