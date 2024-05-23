@@ -34,6 +34,6 @@ jobs:
       # Instead, you can start the Rails server in the background and prevent the pid to cleanup
       - name: Start Rails Server
         run: |
-          rake secret
+          RAILS_ENV=production rails secret
           RAILS_ENV=production bundle exec rails assets:precompile
           RUNNER_TRACKING_ID="" && (bundle exec rake server:restart)
