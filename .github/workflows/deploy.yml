@@ -35,4 +35,5 @@ jobs:
       - name: Start Rails Server
         run: |
           cd /var/www/html/gitActionTurbochat/turbochat/turbochat
+      #start server without cleaning the orpahn process 
           RUNNER_TRACKING_ID="" && (rails s &)
