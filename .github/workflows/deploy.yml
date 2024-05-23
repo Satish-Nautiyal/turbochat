@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: /var/www/html/turbochat
+        working-directory: /var/www/html
 
     steps:
       - uses: actions/checkout@v3
@@ -34,5 +34,3 @@ jobs:
       # Instead, you can start the Rails server in the background
       - name: Start Rails Server
         run: bin/rails server
-
-      # Add any additional steps for testing, linting, etc.
