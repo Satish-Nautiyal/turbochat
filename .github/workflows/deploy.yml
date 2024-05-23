@@ -1,4 +1,4 @@
-name: turbochat
+name: cicdturbochat
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
   build:
     defaults:
       run:
-        working-directory: /var/www/html
+        working-directory: /var/www/html/turbochat/
     runs-on: self-hosted
 
     steps:
