@@ -10,7 +10,7 @@ jobs:
   build:
     defaults:
       run:
-        working-directory: /var/www/html/turbochat
+        working-directory: /var/www/html/gitActionTurbochat
     runs-on: self-hosted
 
     steps:
@@ -23,6 +23,7 @@ jobs:
 
       - name: Setup Application
         run: |
+          cd /var/www/html/gitActionTurbochat/turbochat/turbochat
           bundle install
           bin/rails db:create
           bin/rails db:migrate
