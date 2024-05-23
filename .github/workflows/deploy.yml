@@ -11,7 +11,8 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      working-directory: /var/www/html
+      - name: setup directory
+        working-directory: /var/www/html
       - uses: actions/checkout@v3
 
       - name: Setup Ruby
