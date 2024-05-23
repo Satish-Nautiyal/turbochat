@@ -1,0 +1,89 @@
+Warning: the running version of Bundler (2.2.3) is older than the version that created the lockfile (2.3.11). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.3.11`.
+=> Booting Puma
+=> Rails 7.0.2.4 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.6.4 (ruby 3.0.0-p0) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 1078655
+* Listening on http://127.0.0.1:3000
+* Listening on http://[::1]:3000
+Use Ctrl-C to stop
+Started GET "/" for ::1 at 2024-05-23 18:44:17 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2160)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 42711)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.0ms | Allocations: 47973)
+
+
+Warning: the running version of Bundler (2.2.3) is older than the version that created the lockfile (2.3.11). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.3.11`.
+=> Booting Puma
+=> Rails 7.0.2.4 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+A server is already running. Check /var/www/html/turbochat/tmp/pids/server.pid.
+Exiting
+Started GET "/" for ::1 at 2024-05-23 18:44:25 +0530
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1386)
+  Rendered layouts/_navbar.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 3723)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 4059)
+
+
+2024-05-23 18:44:26 +0530 Rack app ("GET /assets/controllers/scroll_controller-90155acdfacd2f2d894cab2d244ed812978fba442221aa7f806397ec66bb9aef.js" - (::1)): #<TypeError: nil can't be coerced into Float>
+Warning: the running version of Bundler (2.2.3) is older than the version that created the lockfile (2.3.11). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.3.11`.
+=> Booting Puma
+=> Rails 7.0.2.4 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.6.4 (ruby 3.0.0-p0) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 1078740
+* Listening on http://127.0.0.1:3000
+* Listening on http://[::1]:3000
+Use Ctrl-C to stop
+Started GET "/" for ::1 at 2024-05-23 18:44:39 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2154)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 42698)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 47960)
+
+
+Warning: the running version of Bundler (2.2.3) is older than the version that created the lockfile (2.3.11). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.3.11`.
+=> Booting Puma
+=> Rails 7.0.2.4 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.6.4 (ruby 3.0.0-p0) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 1078780
+* Listening on http://127.0.0.1:3000
+* Listening on http://[::1]:3000
+Use Ctrl-C to stop
+Started GET "/" for ::1 at 2024-05-23 18:44:49 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2148)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 42433)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.0ms | Allocations: 47695)
+
+
