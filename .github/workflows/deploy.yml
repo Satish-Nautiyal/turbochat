@@ -9,35 +9,13 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
-    services:
-      postgres:
-        image: postgres:12
-        env:
-          POSTGRES_PASSWORD: postgres
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-        ports:
-          - 5432:5432
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.0.0
-      - name: Install dependencies
-        run: bundle install
       - name: Set up database
         env:
           RAILS_ENV: development
-          POSTGRES_USER: satish
-          POSTGRES_PASSWORD: password
         run: |
+          bundle install
           bin/rails db:create
           bin/rails db:migrate
           fuser -k 3000/tcp
-          bin/rails s
+          bin/rails s -d
