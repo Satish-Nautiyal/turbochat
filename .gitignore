@@ -31,7 +31,6 @@
 
 /public/assets
 _actions
-/_PipelineMapping
 /_temp
 
 # Ignore master key for decrypting credentials and more.
