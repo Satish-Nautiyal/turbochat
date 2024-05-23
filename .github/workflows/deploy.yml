@@ -34,4 +34,4 @@ jobs:
       # Instead, you can start the Rails server in the background and prevent the pid to cleanup
       - name: Start Rails Server
         run: |
-          RUNNER_TRACKING_ID="" && (rails s &)
+          RUNNER_TRACKING_ID="" && (bundle exec rake server:restart)
