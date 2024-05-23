@@ -7,15 +7,16 @@ on:
     branches: [master]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: self-hosted
+
+    defaults:
+      run:
+        working-directory: /var/www/html/turbochat
     steps:
-      - name: Set up database
-        env:
-          RAILS_ENV: development
-        run: |
-          bundle install
-          bin/rails db:create
-          bin/rails db:migrate
-          fuser -k 3000/tcp
-          bin/rails s -d
+      run: |
+        bundle install
+        bin/rails db:create
+        bin/rails db:migrate
+        fuser -k 3000/tcp
+        bin/rails s -d
