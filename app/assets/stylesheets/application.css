@@ -30,28 +30,28 @@
  }
 
  #messages {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 179px);
     overflow-y: scroll;
     overflow-x: hidden;
+    padding-right: 10px;
  }
 
 #room_container{
-    height: 100vh;
+    height: fit-content;
     margin-right: 0px!important;
 }
 
 #side_panel {
-    height: 100vh;
+    height: fit-content;
     margin-right: 0px!important;
-    overflow-x: hidden;
-    overflow-y: scroll;
     margin-bottom: 55px;
 }
 
 #chatroom_container {
-    height: 100vh;
+    height: fit-content;
     margin-right: 0px!important;
     overflow: hidden;
+    padding: 15px;
 }
 
 .msg-content{
@@ -88,3 +88,19 @@
     display: flex;
     justify-content: center;
 }
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #555555;
+}
+
+ ::-webkit-scrollbar {
+    width: 12px;
+    background-color: inherit ;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: inherit;
+}
+  

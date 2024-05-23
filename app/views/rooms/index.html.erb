@@ -20,7 +20,7 @@
             <div id="selected_room">
                 <h4 class="text-center"><%= @user&.email || @selected_room.name %></h4>          
                 <%= turbo_stream_from @selected_room %>
-                <div id="messages">
+                <div id="messages" data-controller="scroll">
                     <%= render @messages if @messages.present? %>
                 </div>
                 <%= render 'layouts/new_message_form' %>
