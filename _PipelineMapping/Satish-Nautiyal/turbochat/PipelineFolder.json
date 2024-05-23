@@ -1,10 +1,10 @@
 ﻿{
   "repositoryName": "Satish-Nautiyal/turbochat",
   "pipelineDirectory": "turbochat",
-  "workspaceDirectory": "turbochat",
+  "workspaceDirectory": "turbochat/turbochat",
   "repositories": {
     "Satish-Nautiyal/turbochat": {
-      "repositoryPath": "turbochat",
+      "repositoryPath": "turbochat/turbochat",
       "lastRunOn": "05/23/2024 15:39:05 +05:30"
     }
   },
