@@ -10,7 +10,7 @@ jobs:
   build:
     defaults:
       run:
-        working-directory: /var/www/html/turbochat
+        working-directory: /var/www/html
     runs-on: self-hosted
 
     steps:
@@ -32,4 +32,4 @@ jobs:
 
       # Instead, you can start the Rails server in the background
       - name: Start Rails Server
-        run: bin/rails server
+        run: bin/rails server -d
