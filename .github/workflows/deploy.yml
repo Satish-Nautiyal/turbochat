@@ -26,10 +26,12 @@ jobs:
           bundle install
           bin/rails db:create
           bin/rails db:migrate
+          rm -R turbochat
+          fuser -k 3000/tcp
 
       # The following line is not recommended in a CI/CD workflow
       # - run: fuser -k 3000/tcp
 
       # Instead, you can start the Rails server in the background
       - name: Start Rails Server
-        run: bin/rails server -p 3000
+        run: bin/rails server -p 3000 -d
