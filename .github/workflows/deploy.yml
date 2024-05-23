@@ -35,4 +35,4 @@ jobs:
       - name: Start Rails Server
         run: |
           cd /var/www/html/gitActionTurbochat/turbochat/turbochat
-          bin/rails server -p 3000
+          bin/rails server -p 3000 -d
