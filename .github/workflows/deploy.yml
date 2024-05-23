@@ -35,7 +35,7 @@ jobs:
         env:
           RAILS_ENV: development
           POSTGRES_USER: satish
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: password
         run: |
           bin/rails db:create
           bin/rails db:migrate
