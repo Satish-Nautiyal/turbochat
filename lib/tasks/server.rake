@@ -13,12 +13,13 @@ namespace :server do
           `kill -SIGINT #{pid}`
         rescue Errno::ESRCH
           puts "Rails server is not running. Starting..."
-          `nohup rails server &`
+          `rails s -e production -d`
         end
       else
         puts "Rails server is not running. Starting..."
-        `nohup rails server &`
+        `rails s -e production -d`
       end
     end
+    return true
   end
   
