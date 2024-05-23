@@ -32,4 +32,4 @@ jobs:
 
       # Instead, you can start the Rails server in the background
       - name: Start Rails Server
-        run: bin/rails server -p 3000 -d
+        run: bin/rails server -p 3000
