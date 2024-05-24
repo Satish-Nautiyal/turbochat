@@ -13,6 +13,9 @@ jobs:
         #working directory of runner
         working-directory: /var/www/html/gitActionTurbochat/turbochat/turbochat
     runs-on: self-hosted
+    env:
+      RAILS_ENV: production
+      SECRET_KEY_BASE: ${{ secrets.SECRET_KEY_BASE }}
 
     steps:
       - uses: actions/checkout@v3
@@ -23,9 +26,6 @@ jobs:
           ruby-version: 3.0.0
 
       - name: Setup Application
-        env:
-          RAILS_ENV: production
-          SECRET_KEY_BASE: ${{ secrets.SECRET_KEY_BASE }}
         run: |
           bundle install
           bin/rails db:create
@@ -36,9 +36,6 @@ jobs:
 
       # Instead, you can start the Rails server in the background and prevent the pid to cleanup
       - name: Start Rails Server
-        env:
-          RAILS_ENV: production
-          SECRET_KEY_BASE: ${{ secrets.SECRET_KEY_BASE }}
         run: |
           RAILS_ENV=production rails secret
           RAILS_ENV=production bundle exec rails assets:precompile
