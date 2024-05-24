@@ -22,12 +22,10 @@ jobs:
         with:
           ruby-version: 3.0.0
 
-      - name: Setup Secret Key Base
+      - name: Setup Application
         env:
           RAILS_ENV: production
           SECRET_KEY_BASE: ${{ secrets.SECRET_KEY_BASE }}
-
-      - name: Setup Application
         run: |
           bundle install
           bin/rails db:create
