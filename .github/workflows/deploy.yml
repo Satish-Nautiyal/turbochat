@@ -36,6 +36,9 @@ jobs:
 
       # Instead, you can start the Rails server in the background and prevent the pid to cleanup
       - name: Start Rails Server
+        env:
+          RAILS_ENV: production
+          SECRET_KEY_BASE: ${{ secrets.SECRET_KEY_BASE }}
         run: |
           RAILS_ENV=production rails secret
           RAILS_ENV=production bundle exec rails assets:precompile
